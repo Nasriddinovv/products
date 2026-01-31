@@ -7,7 +7,7 @@ PRODUCTS = {
                 'price':'900 $', 
                 'desc':'a premium 2025 flagship smartphone featuring a 6.9-inch 2K 120Hz LTPO AMOLED display (3500 nits peak), Qualcomm Snapdragon 8 Elite Gen 5 processor, and a massive 7500mAh battery with 100W wired charging',
                 'desc2':'It is noted for its "Unleashed Mode" for manual overclocking, a 240Hz QHD+ OLED display option, and advanced thermal cooling to support high TGP, offering a desktop-level experience. ',  
-                'rasm':'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTEfPU8l-ALLZhnstss6acHOOlulvTFICtsbg&s',
+                'rasm':'https://microless.com/cdn/products/7cadd65a1551772e04f6c1e9d3d60ea2-hi.jpg',
             },
             {
                 'id':2, 
