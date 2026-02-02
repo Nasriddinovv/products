@@ -11,60 +11,25 @@
     <div class="mx-auto max-w-2xl px-4 py-16 sm:px-6 sm:py-14 lg:max-w-7xl lg:px-8">
         <h2 class="sr-only">Products</h2>
 
-        {% for i in categories %}
 
-        {% if i == "telefon" %}
-        <h1><b><i>telefonlar</i></b></h1>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 top">
+        <h1><b><i>Mahsulotlar</i></b></h1>
 
-                    {% for phone in categories.telefon %}
+            <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8 top">
+                
+                {% for i in product %}
 
-                        <a href="{% url 'detail' phone.id %}" class="group">
-                            <img src="{{phone.rasm}}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
-                            <h3 class="mt-4 text-sm text-gray-300">{{phone.name}}</h3>
-                            <p class="mt-1 text-lg font-medium text-gray-400">{{phone.price}}</p>
-                        </a>
+                <a href="{% url 'detail' i.id %}" class="group">
+                    <img src="{{i.rasm}}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
+                    <h3 class="mt-4 text-sm text-gray-300">{{i.name}}</h3>
+                    <p class="mt-1 text-lg font-medium text-gray-400">{{i.price}} $</p>
+                </a>
 
-                    {% endfor %}
-                </div>
-            {% endif %}
+                {% endfor %}
 
-
-            {% if i == "kompyuterlar" %}
-            <h1><b><i>kompyuterlar</i></b></h1>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-
-                    {% for pc in categories.kompyuterlar %}
-
-                        <a href="{% url 'detail' pc.id %}" class="group">
-                            <img src="{{pc.rasm}}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
-                            <h3 class="mt-4 text-sm text-gray-300">{{pc.name}}</h3>
-                            <p class="mt-1 text-lg font-medium text-gray-400">{{pc.price}}</p>
-                        </a>
-
-                    {% endfor %}
-                </div>
-            {% endif %}
-            
-            
-            {% if i == "klaviaturalar" %}
-            <h1><b><i>klaviaturalar</i></b></h1>
-                <div class="grid grid-cols-1 gap-x-6 gap-y-10 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 xl:gap-x-8">
-
-                    {% for klaviatura in categories.klaviaturalar %}
-
-                        <a href="{% url 'detail' klaviatura.id %}" class="group">
-                            <img src="{{klaviatura.rasm}}" alt="Tall slender porcelain bottle with natural clay textured body and cork stopper." class="aspect-square w-full rounded-lg bg-gray-200 object-cover group-hover:opacity-75 xl:aspect-7/8" />
-                            <h3 class="mt-4 text-sm text-gray-300">{{klaviatura.name}}</h3>
-                            <p class="mt-1 text-lg font-medium text-gray-400">{{klaviatura.price}}</p>
-                        </a>
-
-                    {% endfor %}
-                </div>
-            {% endif %}
-
-        {% endfor %}
+            </div>
+        
     </div>
 </div>
+
 </body>
 </html>
