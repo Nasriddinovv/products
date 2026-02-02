@@ -1,21 +1,17 @@
 from django.shortcuts import render
 from database import PRODUCTS
+from .models import Product
 # Create your views here.
 
 def get_products(request):
-    context = PRODUCTS
-    return render(request, 'products.html', context)
+    context = Product.objects.all()
+    return render(request, 'products.html', {"product":context})
 
 def detail(request, id):
-    
-    prodcut_id = id
-    context = {}
-    
-    for cat in PRODUCTS["categories"]:
-        for i in PRODUCTS["categories"][cat]:
-            if i['id'] == prodcut_id:
-                context["product"] = i 
-                print(i)
+    product_id = id
+    product = Product.objects.get(id=product_id)
+
     
 
-    return render(request, "detail.html", context)
+    return render(request, "detail.html", {"context":product})
+    # buni ham yangiladim
