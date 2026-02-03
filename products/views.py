@@ -12,6 +12,5 @@ def detail(request, id):
     product = Product.objects.get(id=product_id)
 
     
-
     return render(request, "detail.html", {"products":product})
     # buni ham yangiladim
