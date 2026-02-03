@@ -13,5 +13,5 @@ def detail(request, id):
 
     
 
-    return render(request, "detail.html", {"context":product})
+    return render(request, "detail.html", {"products":product})
     # buni ham yangiladim
